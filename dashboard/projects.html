@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Collab-Nest</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation (same as index.html) -->
+        <aside class="sidebar">
+            <!-- Copy the sidebar from index.html -->
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h2>Projects</h2>
+                <div class="header-actions">
+                    <button class="btn primary-btn" id="new-project-btn">
+                        <i class="fas fa-plus"></i> New Project
+                    </button>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search projects...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Projects Grid -->
+            <div class="projects-grid" id="projects-container">
+                <!-- Projects will be loaded here via JavaScript -->
+            </div>
+            
+            <!-- New Project Modal -->
+            <d<div class="modal" id="new-project-modal">
+                <div class="modal-content">
+                  <span class="close-modal">&times;</span>
+                  <h2>Create New Project</h2>
+                  <form id="project-form">
+                    <div class="form-group">
+                      <label for="project-name">Project Name</label>
+                      <input type="text" id="project-name" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="project-description">Description</label>
+                      <textarea id="project-description" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Create Project</button>
+                  </form>
+                </div>
+              </div>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

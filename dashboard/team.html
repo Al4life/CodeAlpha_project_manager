@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team | Collab-Nest</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation (same as index.html) -->
+        <aside class="sidebar">
+            <!-- Copy the sidebar from index.html -->
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h2>Team Members</h2>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search team members...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <button class="btn primary-btn" id="invite-member-btn">
+                        <i class="fas fa-user-plus"></i> Invite Member
+                    </button>
+                </div>
+            </header>
+            
+            <!-- Team Members Grid -->
+            <div class="team-grid" id="team-members">
+                <!-- Team members will be loaded here via JavaScript -->
+            </div>
+            
+            <!-- Invite Member Modal -->
+            <div class="modal" id="invite-modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h3>Invite Team Member</h3>
+                    <form id="invite-form">
+                        <div class="form-group">
+                            <label for="invite-email">Email Address</label>
+                            <input type="email" id="invite-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="invite-project">Project</label>
+                            <select id="invite-project" required>
+                                <option value="">Loading projects...</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Send Invitation</button>
+                    </form>
+                </div>
+            </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

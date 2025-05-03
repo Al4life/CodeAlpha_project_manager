@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Collab-Nest</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <h1>Collab-Nest</h1>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active">
+                        <a href="index.html">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="projects.html">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tasks.html">
+                            <i class="fas fa-tasks"></i>
+                            <span>Tasks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="team.html">
+                            <i class="fas fa-users"></i>
+                            <span>Team</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="user-profile">
+                <div class="profile-image">
+                    <img src="https://ui-avatars.com/api/?name=John+Doe&background=6e48aa&color=fff" alt="User">
+                </div>
+                <div class="profile-info">
+                    <h4 id="username-display">John Doe</h4>
+                    <p id="email-display">john@example.com</p>
+                </div>
+                <button id="logout-btn" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h2>Dashboard Overview</h2>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                </div>
+            </header>
+            
+            <div class="stats-grid">
+                <!-- Active Projects Card -->
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: rgba(110, 72, 170, 0.2);">
+                        <i class="fas fa-project-diagram" style="color: #6e48aa;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="active-projects-count">12</h3>
+                        <p>Active Projects</p>
+                    </div>
+                </div>
+                
+                <!-- Pending Tasks Card -->
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: rgba(255, 152, 0, 0.2);">
+                        <i class="fas fa-tasks" style="color: #ff9800;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="pending-tasks-count">24</h3>
+                        <p>Pending Tasks</p>
+                    </div>
+                </div>
+                
+                <!-- Completed Tasks Card -->
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: rgba(76, 175, 80, 0.2);">
+                        <i class="fas fa-check-circle" style="color: #4caf50;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="completed-tasks-count">42</h3>
+                        <p>Completed Tasks</p>
+                    </div>
+                </div>
+                
+                <!-- Team Members Card -->
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: rgba(71, 118, 230, 0.2);">
+                        <i class="fas fa-users" style="color: #4776e6;"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="team-members-count">8</h3>
+                        <p>Team Members</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-grid">
+                <!-- Recent Projects Section -->
+                <section class="content-section">
+                    <div class="section-header">
+                        <h3>Recent Projects</h3>
+                        <a href="projects.html" class="view-all">View All</a>
+                    </div>
+                    <div class="projects-list" id="recent-projects">
+                        <!-- Projects will be loaded here via JavaScript -->
+                    </div>
+                </section>
+                
+                <!-- Upcoming Tasks Section -->
+                <section class="content-section">
+                    <div class="section-header">
+                        <h3>Upcoming Tasks</h3>
+                        <a href="tasks.html" class="view-all">View All</a>
+                    </div>
+                    <div class="tasks-list" id="upcoming-tasks">
+                        <!-- Tasks will be loaded here via JavaScript -->
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Team Activity Section -->
+            <section class="content-section full-width">
+                <div class="section-header">
+                    <h3>Team Activity</h3>
+                </div>
+                <div class="activity-feed" id="team-activity">
+                    <!-- Activity will be loaded here via JavaScript -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
